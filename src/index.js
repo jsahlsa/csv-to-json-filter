@@ -8,7 +8,7 @@ const showDate = document.querySelector('.date');
 
 let currentDate = new Date();
 
-showDate.textContent = `${currentDate.getMonth()}${currentDate.getDate()}`;
+showDate.textContent = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
 
 function upload() {
   let file = fileUpload.files[0];
@@ -41,9 +41,10 @@ function upload() {
       // change header names
       console.log(Object.keys(json[i]));
 
-      // adds gig and room # columns
+      // adds sig and room # columns
       json[i].signature = '';
       json[i]['room#'] = '';
+      
     }
     // change header names
     let newJson = JSON.stringify(json);
