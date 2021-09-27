@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.page-wrapper {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+table.dataTable {
+  width: 1100px;
+}
+
+tr.odd {
+  background: #cec9c9;
+}
+
+thead {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+tbody {
+  font-size: 1.2em;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+input {
+  appearance: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="search"] {
+  font-size: 2rem;
+  line-height: 3rem;
+  height: 4rem;
+  font-weight: 300;
+  margin: 0;
+  color: #aab9bf;
+  width: 50em;
+  height: 3rem;
+  padding: 1rem 0 1rem 1rem;
+  width: 100%;
+  border: 1px solid #6f7f87;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  cursor: text;
+}
+
+.dataTables_filter > label {
+  border: none;
+  padding: 0;
+  background-color: #fff;
+  color: #2f4047;
+  margin: 0;
+  cursor: default;
+  margin-bottom: 1rem;
+}
+
+.dataTables_filter > label:hover {
+  background-color: #fff;
+  color: #2f4047;
+}
+
+input[type="button"] {
+  height: 6rem;
+  color: #2f4047;
+  background: #fff;
+  border: #6f7f87 2px solid;
+  padding: 1.25rem 3rem;
+  transition: all 0.2s;
+}
+
+input[type="button"]:hover {
+  color: #0078b4;
+  background: #fff;
+  border: #0078b4 2px solid;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  appearance: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-size: 1.75rem;
+  height: 5rem;
+  padding: 1rem 2rem;
+  margin-right: 2em;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  background: #0078b4;
+  color: #fff;
+  border: #0078b4 1px solid;
+  transition: all 0.2s;
+}
+
+label:hover {
+  background: #00689c;
+  border-color: #00689c;
+}
+
+@media print {
+  @page {
+    size: letter landscape;
+  }
+  label,
+  input,
+  .dataTables_info,
+  .paginate_button {
+    display: none;
+  }
+}
