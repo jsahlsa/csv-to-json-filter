@@ -58,6 +58,7 @@ function upload() {
       trackingNumber: 'tracking',
       weightValue: 'LBs',
     };
+    // mapObj contains new text to replace old text in stringified json
     newJson = newJson.replace(
       /carrierName|packageGroup|recipientPersonName|senderPersonName|stagedAreaShelfNumber|trackingNumber|weightValue/gi,
       function (matched) {
