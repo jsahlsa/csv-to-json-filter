@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 html {
   font-size: 10px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -14,6 +14,9 @@ body {
 
 .page-wrapper {
   width: 100%;
+}
+
+.header-date {
 }
 
 h1 {
@@ -57,7 +60,7 @@ input {
   cursor: pointer;
 }
 
-input[type="search"] {
+input[type='search'] {
   font-size: 2rem;
   line-height: 3rem;
   height: 4rem;
@@ -90,7 +93,7 @@ input[type="search"] {
   color: #2f4047;
 }
 
-input[type="button"] {
+input[type='button'] {
   height: 6rem;
   color: #2f4047;
   background: #fff;
@@ -99,13 +102,13 @@ input[type="button"] {
   transition: all 0.2s;
 }
 
-input[type="button"]:hover {
+input[type='button']:hover {
   color: #0078b4;
   background: #fff;
   border: #0078b4 2px solid;
 }
 
-input[type="file"] {
+input[type='file'] {
   display: none;
 }
 

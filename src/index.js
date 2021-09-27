@@ -4,8 +4,11 @@ const csv2json = require('./csv2json.js');
 const uploadButton = document.querySelector('#upload');
 const fileUpload = document.querySelector('input');
 const pageWrapper = document.querySelector('.page-wrapper');
+const showDate = document.querySelector('.date');
 
-console.log(uploadButton);
+let currentDate = new Date();
+
+showDate.textContent = `${currentDate.getMonth()}${currentDate.getDate()}`;
 
 function upload() {
   let file = fileUpload.files[0];
@@ -126,5 +129,5 @@ function upload() {
 }
 
 if (uploadButton) {
-    uploadButton.addEventListener('click', upload);
+  uploadButton.addEventListener('click', upload);
 }
