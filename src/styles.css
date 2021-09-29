@@ -161,7 +161,7 @@ label:active {
   }
 }
 
-/* force landscape */
+/* force landscape 
 @media (orientation: portrait) {
   html {
     transform: rotate(-90deg);
@@ -174,3 +174,4 @@ label:active {
     left: 0;
   }
 }
+*/
