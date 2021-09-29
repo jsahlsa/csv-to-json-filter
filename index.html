@@ -8,6 +8,12 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" type="text/css" href="src/datatables.css" />
 
@@ -21,14 +27,21 @@
   <body>
     <div class="page-wrapper">
       <div class="header-date">
-        <h1>Esmeralda Package Inventory</h1>
+        <h1 contenteditable>
+          Esmeralda Package Inventory<span class="tip"
+            >(👈🏽 this header is editable)</span
+          >
+        </h1>
         <span class="date">loading...</span>
       </div>
-      <label for="file-upload" class="picker"
-        >file picker
-        <input type="file" id="file-upload" />
-      </label>
-      <input type="button" value="upload" id="upload" />
+      <form>
+        <label for="file-upload" class="picker"
+          >pick file
+          <input type="file" id="file-upload" />
+        </label>
+
+        <input type="submit" id="upload" value="generate inventory"/>
+      </form>
     </div>
     <script src="src/index.js"></script>
   </body>

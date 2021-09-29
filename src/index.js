@@ -5,15 +5,31 @@ const uploadButton = document.querySelector('#upload');
 const fileUpload = document.querySelector('input');
 const pageWrapper = document.querySelector('.page-wrapper');
 const showDate = document.querySelector('.date');
+const picker = document.querySelector('.picker');
 
 let currentDate = new Date();
 
 showDate.textContent = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
 
-function upload() {
+
+window.onload = function () {
+  fileUpload.value = null;
+  console.log(fileUpload.files.length);
+}
+
+console.log(window.orientation);
+
+function upload(e) {
+  e.preventDefault();
   let file = fileUpload.files[0];
 
   let reader = new FileReader();
+
+  if (file) {
+    picker.textContent = 'uploaded';
+  }
+
+  
 
   reader.readAsText(file);
   reader.onload = function () {
