@@ -101,7 +101,7 @@ input[type='search']:focus {
   color: #2f4047;
 }
 
-input[type='submit'] {
+input[type='button'] {
   height: 6rem;
   font-size: 1.5rem;
   color: #2f4047;
@@ -109,12 +109,28 @@ input[type='submit'] {
   border: #6f7f87 2px solid;
   padding: 1.25rem 3rem;
   transition: all 0.2s;
+  margin-right: 2em;
 }
 
-input[type='submit']:hover {
+input[type='button']:hover {
   color: #0078b4;
   background: #fff;
   border: #0078b4 2px solid;
+}
+input[type='submit'] {
+  height: 6rem;
+  font-size: 1.5rem;
+  color: white;
+  background: #2f4047;
+  padding: 0.5rem 2rem;
+  border: none;
+  transition: all 0.2s;
+}
+
+input[type='submit']:hover {
+  color: #2f4047;
+  background: #fff;
+  border: #2f4047 2px solid;
 }
 
 input[type='file'] {
