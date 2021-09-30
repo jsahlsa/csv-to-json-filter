@@ -118,7 +118,7 @@ input[type='button']:hover {
   border: #0078b4 2px solid;
 }
 input[type='submit'] {
-  height: 6rem;
+  height: 4rem;
   font-size: 1.5rem;
   color: white;
   background: #2f4047;
