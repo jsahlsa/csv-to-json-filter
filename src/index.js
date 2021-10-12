@@ -58,7 +58,7 @@ function upload(e) {
       console.log(Object.keys(json[i]));
 
       // adds sig and room # columns
-      json[i].signature = '';
+      json[i]['print name'] = '';
       json[i]['room#'] = '';
       
     }
