@@ -86,19 +86,22 @@
   function convert(csv, options) {
     options || (options = {});
     if (csv.length == 0) throw errorEmpty;
-
-    var separator = options.separator || detectSeparator(csv);
+    // next two lines fix csv with array of data by removing it
+    // need to make new csv as original is not mutable
+    const regex = /\[.*?\]/g;
+    let newCsv = csv.replace(regex, ' ');
+    var separator = options.separator || detectSeparator(newCsv);
     if (!separator) throw errorDetectingSeparator;
 
     var a = [];
     try {
-      var a = csvParser.parse(csv, pegjsSeparatorNames[separator]);
+      var a = csvParser.parse(newCsv, pegjsSeparatorNames[separator]);
     } catch (error) {
-      var start = csv.lastIndexOf('\n', error.offset),
-        end = csv.indexOf('\n', error.offset),
-        line = csv.substring(
+      var start = newCsv.lastIndexOf('\n', error.offset),
+        end = newCsv.indexOf('\n', error.offset),
+        line = newCsv.substring(
           start >= -1 ? start : 0,
-          end > -1 ? end : csv.length
+          end > -1 ? end : newCsv.length
         );
       throw (
         error.message +

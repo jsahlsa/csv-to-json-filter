@@ -9,13 +9,14 @@ const picker = document.querySelector('.picker');
 
 let currentDate = new Date();
 
-showDate.textContent = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
-
+showDate.textContent = `${
+  currentDate.getMonth() + 1
+}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
 
 window.onload = function () {
   fileUpload.value = null;
   console.log(fileUpload.files.length);
-}
+};
 
 console.log(window.orientation);
 
@@ -29,11 +30,10 @@ function upload(e) {
     picker.textContent = 'uploaded';
   }
 
-  
-
   reader.readAsText(file);
   reader.onload = function () {
     const data = reader.result;
+
     const json = csv2json(data, { parseNumbers: true });
 
     for (let i = 0; i < json.length; i++) {
@@ -41,6 +41,9 @@ function upload(e) {
       delete json[i].carrierCode;
       delete json[i].locationId;
       delete json[i].emailNotificationSentDatetime;
+      delete json[i].eventName;
+      delete json[i].lastUpdatedBy;
+      delete json[i].rateOptions;
       delete json[i].packageFlow;
       delete json[i].packageId;
       delete json[i].packageStatus;
@@ -60,7 +63,6 @@ function upload(e) {
       // adds sig and room # columns
       json[i]['print name'] = '';
       json[i]['room#'] = '';
-      
     }
     // change header names
     let newJson = JSON.stringify(json);
